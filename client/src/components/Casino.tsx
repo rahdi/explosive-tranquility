@@ -1,10 +1,10 @@
 import React from "react";
 
-type Props = {};
+type Props = { handleLogout: VoidFunction };
 
-const Casino = (props: Props) => {
+const Casino = ({ handleLogout }: Props) => {
   return (
-    <div className="casino" style={{ display: "none" }}>
+    <div className="casino">
       <div className="ui grid centered">
         <div className="twelve wide column">
           <div className="ui list">
@@ -21,7 +21,10 @@ const Casino = (props: Props) => {
             </div>
             {/* <!-- end player item template --> */}
           </div>
-          <div className="logout ui left floated secondary button inverted">
+          <div
+            className="logout ui left floated secondary button inverted"
+            onClick={handleLogout}
+          >
             <i className="left chevron icon"></i>Log Out
           </div>
         </div>

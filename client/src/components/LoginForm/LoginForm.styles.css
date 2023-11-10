@@ -1,0 +1,7 @@
+.ui.large.negative.message {
+  padding: 10px 0;
+}
+
+.ui.large.negative.message * {
+  font-size: medium;
+}
