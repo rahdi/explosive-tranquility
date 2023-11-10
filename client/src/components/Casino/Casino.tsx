@@ -1,5 +1,8 @@
 import React from "react";
 
+import { PlayerItem } from "./PlayerItem";
+import { GamesList } from "./GamesList";
+
 type Props = { handleLogout: VoidFunction };
 
 const Casino = ({ handleLogout }: Props) => {
@@ -8,18 +11,7 @@ const Casino = ({ handleLogout }: Props) => {
       <div className="ui grid centered">
         <div className="twelve wide column">
           <div className="ui list">
-            {/* <!-- player item template --> */}
-            <div className="player item">
-              <img className="ui avatar image" src="" alt="avatar" />
-
-              <div className="content">
-                <div className="header">
-                  <b className="name"></b>
-                </div>
-                <div className="description event"></div>
-              </div>
-            </div>
-            {/* <!-- end player item template --> */}
+            <PlayerItem />
           </div>
           <div
             className="logout ui left floated secondary button inverted"
@@ -39,27 +31,7 @@ const Casino = ({ handleLogout }: Props) => {
         <div className="twelve wide column">
           <h3 className="ui dividing header">Games</h3>
 
-          <div className="ui relaxed divided game items links">
-            {/* <!-- game item template --> */}
-            <div className="game item">
-              <div className="ui small image">
-                <img src="" alt="game-icon" />
-              </div>
-              <div className="content">
-                <div className="header">
-                  <b className="name"></b>
-                </div>
-                <div className="description"></div>
-                <div className="extra">
-                  <div className="play ui right floated secondary button inverted">
-                    Play
-                    <i className="right chevron icon"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* <!-- end game item template --> */}
-          </div>
+          <GamesList />
         </div>
         <div className="four wide column">
           <h3 className="ui dividing header">Categories</h3>

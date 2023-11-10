@@ -1,15 +1,8 @@
-export type Player = {
-  [name: string]: {
-    name: string;
-    avatar: string;
-    event: string;
-    password: string;
-  };
-};
+import { Player } from "../../shared";
 
 export type LoginResponseSuccess = {
   status: "success";
-  player: Player;
+  player: { [name: string]: Player };
 };
 
 export type LoginResponseFailure = {
