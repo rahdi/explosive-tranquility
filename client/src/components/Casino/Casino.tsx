@@ -3,6 +3,7 @@ import React from "react";
 import { PlayerItem } from "./PlayerItem";
 import { Games } from "./Games";
 import { Categories } from "./Categories";
+import { SearchInput } from "./SearchInput";
 
 type Props = { handleLogout: VoidFunction };
 
@@ -22,10 +23,7 @@ const Casino = ({ handleLogout }: Props) => {
           </div>
         </div>
         <div className="four wide column">
-          <div className="search ui small icon input">
-            <input type="text" placeholder="Search Game" />
-            <i className="search icon"></i>
-          </div>
+          <SearchInput />
         </div>
       </div>
       <div className="ui grid">
