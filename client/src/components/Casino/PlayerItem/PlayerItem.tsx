@@ -1,10 +1,9 @@
 import React from "react";
+
 import { usePlayer } from "./PlayerItem.utils";
 import { Loader } from "../../../shared";
 
-type Props = {};
-
-const PlayerItem = (props: Props) => {
+const PlayerItem = () => {
   const player = usePlayer();
 
   if (!player) return <Loader />;

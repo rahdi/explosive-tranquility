@@ -1,22 +1,21 @@
 import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import { Casino, Ingame, LoginForm, Logo } from "../components";
+import { LoginForm, Logo } from "../components";
 import { useHandleLoginState } from "./App.utils";
+import AppRoutes from "./AppRoutes";
 
-type Props = {};
-
-const App = (props: Props) => {
+const App = () => {
   const { isLoggedIn, handleLogin, handleLogout } = useHandleLoginState();
 
   return (
-    <>
+    <BrowserRouter>
       <Logo />
       <div className="main container">
         {!isLoggedIn && <LoginForm handleLogin={handleLogin} />}
-        {isLoggedIn && <Casino handleLogout={handleLogout} />}
-        <Ingame />
+        {isLoggedIn && <AppRoutes handleLogout={handleLogout} />}
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 

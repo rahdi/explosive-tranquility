@@ -4,9 +4,7 @@ import { Loader } from "../../../shared";
 import { useCategories } from "./Categories.utils";
 import CategoryItem from "./CategoryItem";
 
-type Props = {};
-
-const Categories = (props: Props) => {
+const Categories = () => {
   const categories = useCategories();
 
   if (!categories) return <Loader />;

@@ -6,7 +6,7 @@ type Props = {
   category: Category;
 };
 
-const CategoryItem = ({ category: { id, name } }: Props) => {
+const CategoryItem = ({ category: { name } }: Props) => {
   return (
     <div className="category item">
       <div className="content">

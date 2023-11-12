@@ -1,12 +1,15 @@
 import React from "react";
 
-import { Game } from "./Games.types";
+import { Game } from "../Games.types";
+import { useOpenGame } from "./GameItem.utils";
 
 type Props = {
   game: Game;
 };
 
-const GameItem = ({ game: { name, description, icon } }: Props) => {
+const GameItem = ({ game: { name, description, icon, code } }: Props) => {
+  const openGame = useOpenGame()
+
   return (
     <div className="game item">
       <div className="ui small image">
@@ -18,7 +21,7 @@ const GameItem = ({ game: { name, description, icon } }: Props) => {
         </div>
         <div className="description">{description}</div>
         <div className="extra">
-          <div className="play ui right floated secondary button inverted">
+          <div className="play ui right floated secondary button inverted" onClick={()=>openGame(code)}>
             Play
             <i className="right chevron icon"></i>
           </div>
