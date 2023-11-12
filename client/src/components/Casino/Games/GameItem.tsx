@@ -1,5 +1,6 @@
 import React from "react";
-import { Game } from "./GamesList.types";
+
+import { Game } from "./Games.types";
 
 type Props = {
   game: Game;

@@ -1,7 +1,8 @@
 import React from "react";
 
 import { PlayerItem } from "./PlayerItem";
-import { GamesList } from "./GamesList";
+import { Games } from "./Games";
+import { Categories } from "./Categories";
 
 type Props = { handleLogout: VoidFunction };
 
@@ -30,21 +31,12 @@ const Casino = ({ handleLogout }: Props) => {
       <div className="ui grid">
         <div className="twelve wide column">
           <h3 className="ui dividing header">Games</h3>
-
-          <GamesList />
+          <Games />
         </div>
+
         <div className="four wide column">
           <h3 className="ui dividing header">Categories</h3>
-
-          <div className="ui selection animated list category items">
-            {/* <!-- category item template --> */}
-            <div className="category item">
-              <div className="content">
-                <div className="header"></div>
-              </div>
-            </div>
-            {/* <!-- end category item template --> */}
-          </div>
+          <Categories />
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Game } from "./GamesList.types";
+
+import { Game } from "./Games.types";
 
 export const useGames = () => {
   const [games, setGames] = useState<Game[] | null>(null);
 
-  // Probably not a good idea to use useEffect here. Double fetching
   useEffect(() => {
     if (!games) {
       (async () => {

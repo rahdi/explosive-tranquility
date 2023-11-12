@@ -1,11 +1,12 @@
 import React from "react";
+
 import GameItem from "./GameItem";
-import { useGames } from "./GamesList.utils";
+import { useGames } from "./Games.utils";
 import { Loader } from "../../../shared";
 
 type Props = {};
 
-const GamesList = (props: Props) => {
+const Games = (props: Props) => {
   const games = useGames();
 
   if (!games) return <Loader />;
@@ -19,4 +20,4 @@ const GamesList = (props: Props) => {
   );
 };
 
-export default GamesList;
+export default Games;
