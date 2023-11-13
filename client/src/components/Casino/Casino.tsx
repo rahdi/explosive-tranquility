@@ -10,7 +10,7 @@ type Props = { handleLogout: VoidFunction };
 const Casino = ({ handleLogout }: Props) => {
   return (
     <div className="casino">
-      <div className="ui grid centered">
+      <div className="ui stackable two column grid centered column">
         <div className="twelve wide column">
           <div className="ui list">
             <PlayerItem />
@@ -26,15 +26,17 @@ const Casino = ({ handleLogout }: Props) => {
           <SearchInput />
         </div>
       </div>
-      <div className="ui grid">
-        <div className="twelve wide column">
-          <h3 className="ui dividing header">Games</h3>
-          <Games />
-        </div>
+      <div className="column">
+        <div className="ui stackable grid mobile reversed">
+          <div className="twelve wide column">
+            <h3 className="ui dividing header">Games</h3>
+            <Games />
+          </div>
 
-        <div className="four wide column">
-          <h3 className="ui dividing header">Categories</h3>
-          <Categories />
+          <div className="four wide column">
+            <h3 className="ui dividing header">Categories</h3>
+            <Categories />
+          </div>
         </div>
       </div>
     </div>
